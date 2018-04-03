@@ -107,12 +107,6 @@ public class ClientUI extends javax.swing.JFrame {
                 checkbox4MouseClicked(evt);
             }
         });
-        checkbox4.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                checkbox4KeyPressed(evt);
-            }
-        });
-
         checkbox5.setLabel("중장기");
         checkbox5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -129,11 +123,6 @@ public class ClientUI extends javax.swing.JFrame {
         jList1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jList1MouseClicked(evt);
-            }
-        });
-        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
-            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
-                jList1ValueChanged(evt);
             }
         });
         jScrollPane1.setViewportView(jList1);
@@ -257,11 +246,7 @@ public class ClientUI extends javax.swing.JFrame {
     private void checkbox2MouseClicked(java.awt.event.MouseEvent evt) {                                       
         // 체크박스 - 단기
         System.out.println("단기");
-    }                                      
-
-    private void checkbox4KeyPressed(java.awt.event.KeyEvent evt) {                                     
-        // 이거 지우기(잘못누름)
-    }                                    
+    }                                                                          
 
     private void checkbox4MouseClicked(java.awt.event.MouseEvent evt) {                                       
         // 체크박스 - 스윙
@@ -282,13 +267,8 @@ public class ClientUI extends javax.swing.JFrame {
         jTextArea1.setText("종목 : " + item.getItem_name() + "\n"
         					+ item.getItem_desc());
         jTextArea2.setText(item.getItem_desc2());
-        
-        
     }                                   
-
-    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {                                    
-        // 이거지우기?
-    }                                   
+                               
 
     /**
      * @param args the command line arguments
